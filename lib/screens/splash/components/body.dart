@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecsite/screens/splash/components/default_button.dart';
 import 'package:flutter_ecsite/sizeConfig.dart';
 import '../components/splash_content.dart';
 import 'package:flutter_ecsite/constants.dart';
@@ -61,19 +62,10 @@ class _BodyState extends State<Body> {
                     (index) => buildDot(index),
                   ),
                 ),
-                Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  height: getProportionateScreenHeight(56),
-                  child: FlatButton(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    color: kPrimaryColor,
-                    onPressed: () {},
-                    child: Text(
-                      'Continue',
-                      style: TextStyle(fontSize: getProportionateScreenWidth(18),color: Colors.white),
-                    ),
-                  ),
+                Spacer(flex: 3,),
+                DefaultButton(
+                  text: "Continue",
+                  press: (){},
                 ),
                 Spacer(),
               ],
@@ -96,3 +88,4 @@ class _BodyState extends State<Body> {
     );
   }
 }
+
